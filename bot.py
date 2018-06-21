@@ -250,7 +250,7 @@ class Modmail(commands.Bot):
         member = self.guild.get_member(user.id)
         avi = user.avatar_url
         time = datetime.datetime.utcnow()
-        desc = 'Modmail thread started.'
+        desc = 'Preciso de ajuda.'
         color = 0
 
         if member:
@@ -263,19 +263,19 @@ class Modmail(commands.Bot):
 
         em = discord.Embed(colour=color, description=desc, timestamp=time)
 
-        em.add_field(name='Account Created', value=str((time - user.created_at).days)+' days ago.')
+        em.add_field(name='Conta Criada', value=str((time - user.created_at).days)+' Dias Atráz.')
         em.set_footer(text='User ID: '+str(user.id))
         em.set_thumbnail(url=avi)
         em.set_author(name=user, icon_url=server.icon_url)
       
 
         if member:
-            em.add_field(name='Joined', value=str((time - member.joined_at).days)+' days ago.')
-            em.add_field(name='Member No.',value=str(member_number),inline = True)
+            em.add_field(name='Ingressou', value=str((time - member.joined_at).days)+' days ago.')
+            em.add_field(name='Membro.',value=str(member_number),inline = True)
             em.add_field(name='Nick', value=member.nick, inline=True)
-            em.add_field(name='Roles', value=rolenames, inline=True)
+            em.add_field(name='Cargos', value=rolenames, inline=True)
         
-        em.add_field(name='Message', value=message.content, inline=False)
+        em.add_field(name='Messagem', value=message.content, inline=False)
 
         return em
 
