@@ -218,8 +218,8 @@ class Modmail(commands.Bot):
             return await ctx.send('This is not a modmail thread.')
         user_id = int(ctx.channel.topic.split(': ')[1])
         user = self.get_user(user_id)
-        em = discord.Embed(title='Thread Closed')
-        em.description = f'**{ctx.author}** has closed this modmail session.'
+        em = discord.Embed(title='Fechado!')
+        em.description = f'A sessão foi finalizada!.'
         em.color = discord.Color.red()
         try:
             await user.send(embed=em)
@@ -356,7 +356,7 @@ class Modmail(commands.Bot):
         if str(message.author.id) in blocked:
             return await message.author.send(embed=self.blocked_em)
 
-        em = discord.Embed(title='Thanks for the message!')
+        em = discord.Embed(title='Recebemos sua mensagem!')
         em.description = 'Nossa equipe de staff está trabalhando duro para atende-lo o mais rápido possivel, aguarde!'
         em.color = discord.Color.green()
 
