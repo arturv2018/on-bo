@@ -231,7 +231,7 @@ class Modmail(commands.Bot):
     async def ping(self, ctx):
         """Pong!"""
         em = discord.Embed()
-        em.title ='Pong! Websocket Latency:'
+        em.title ='Pong! Eu sou uma lesma!:'
         em.description = f'{self.ws.latency * 1000:.4f} ms'
         em.color = 0x00FF00
         await ctx.send(embed=em)
@@ -250,7 +250,7 @@ class Modmail(commands.Bot):
         member = self.guild.get_member(user.id)
         avi = user.avatar_url
         time = datetime.datetime.utcnow()
-        desc = 'Preciso de ajuda.'
+        desc = 'Aguardando ajuda.'
         color = 0
 
         if member:
@@ -263,14 +263,14 @@ class Modmail(commands.Bot):
 
         em = discord.Embed(colour=color, description=desc, timestamp=time)
 
-        em.add_field(name='Conta Criada', value=str((time - user.created_at).days)+' Dias Atráz.')
+        em.add_field(name='Conta Criada', value=str((time - user.created_at).days)+' dias atráz.')
         em.set_footer(text='User ID: '+str(user.id))
         em.set_thumbnail(url=avi)
         em.set_author(name=user, icon_url=server.icon_url)
       
 
         if member:
-            em.add_field(name='Ingressou', value=str((time - member.joined_at).days)+' days ago.')
+            em.add_field(name='Ingressou', value=str((time - member.joined_at).days)+' dias atráz.')
             em.add_field(name='Membro.',value=str(member_number),inline = True)
             em.add_field(name='Nick', value=member.nick, inline=True)
             em.add_field(name='Cargos', value=rolenames, inline=True)
