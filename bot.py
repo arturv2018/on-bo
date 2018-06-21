@@ -229,7 +229,7 @@ class Modmail(commands.Bot):
 
     @commands.command()
     async def ping(self, ctx):
-        """Pong!"""
+        """Pong! Eu sou uma lesma!"""
         em = discord.Embed()
         em.title ='Pong! Eu sou uma lesma!:'
         em.description = f'{self.ws.latency * 1000:.4f} ms'
