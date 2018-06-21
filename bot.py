@@ -151,21 +151,21 @@ class Modmail(commands.Bot):
     def help_embed(self, prefix):
         em = discord.Embed(color=0x00FFFF)
         em.set_author(name='Mod Mail - Help', icon_url=self.user.avatar_url)
-        em.description = 'This bot is a python implementation of a stateless "Mod Mail" bot. ' \
-                         'Made by Kyb3r and improved by the suggestions of others. This bot ' \
-                         'saves no data and utilises channel topics for storage and syncing.' 
+        em.description = 'Olhem para mim, eu sou uma foca! Não, mentira, eu sou o suporte online!. ' \
+                         'Preste atenção nos meus comandos abaixo, para poder ajudar seus amiguinhos, ' \
+                         'não há segredos em meus comandos, então boa sorte!.' 
                  
 
-        cmds = f'`{prefix}setup [modrole] <- (optional)` - Command that sets up the bot.\n' \
-               f'`{prefix}reply <message...>` - Sends a message to the current thread\'s recipient.\n' \
-               f'`{prefix}close` - Closes the current thread and deletes the channel.\n' \
-               f'`{prefix}disable` - Closes all threads and disables modmail for the server.\n' \
-               f'`{prefix}customstatus` - Sets the Bot status to whatever you want.' \
-               f'`{prefix}block` - Blocks a user from using modmail!' \
-               f'`{prefix}unblock` - Unblocks a user from using modmail!'
+        cmds = f'`{prefix}setup [modrole] <- (opcional)` - Configuração do bot.\n' \
+               f'`{prefix}reply <message...>` - Envia uma mensagem para o destinário.\n' \
+               f'`{prefix}close` - Fecha a sala de suporte com o membro.\n' \
+               f'`{prefix}disable` - Desativa o modmail.\n' \
+               f'`{prefix}customstatus` - Mude o status do bot.' \
+               f'`{prefix}block` - Bloqueia o usuario de usar o modmail!' \
+               f'`{prefix}unblock` - Desbloqueia o usuario permitindo-o a voltar a usar o modmail!'
 
-        warn = 'Do not manually delete the category or channels as it will break the system. ' \
-               'Modifying the channel topic will also break the system.'
+        warn = 'O importante de tudo, é não mudar o nome manualmente ou excluir a sala. ' \
+               'Eu sei que você não vai mudar o nome ou excluir esta categoria, mesmo assim, mando se fuder do mesmo jeito.'
         em.add_field(name='Commands', value=cmds)
         em.add_field(name='Warning', value=warn)
         em.add_field(name='Github', value='https://github.com/verixx/modmail')
